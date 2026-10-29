@@ -2,45 +2,138 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Page Name | FitPlan</title>
-  <link href="../dist/output.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings</title>
+  <link rel="stylesheet" href="../dist/output.css">
 </head>
-<body class="flex min-h-screen flex-col bg-gray-50 text-gray-900">
+<body class="bg-neutral-100 text-neutral-900 font-sans">
 
-  <header class="bg-blk">
-    <nav aria-label="Main navigation" class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-      <a href="home.html" class="text-xl font-bold text-gn-txt">FitPlan</a>
-
-      <ul class="hidden items-center gap-6 md:flex">
-        <li><a href="dashboard.html" class="text-gray-200 hover:text-gn-txt focus:outline-2 focus:outline-gn-txt">Dashboard</a></li>
-        <li><a href="exercises.html" class="text-gray-200 hover:text-gn-txt focus:outline-2 focus:outline-gn-txt">Exercises</a></li>
-        <li><a href="routine-form.html" class="text-gray-200 hover:text-gn-txt focus:outline-2 focus:outline-gn-txt">Routines</a></li>
-        <li><a href="profile.html" class="text-gray-200 hover:text-gn-txt focus:outline-2 focus:outline-gn-txt">Profile</a></li>
-      </ul>
-
+  
+  <nav class="bg-green-800">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between gap-4">
+      
       <details class="relative md:hidden">
-        <summary aria-label="Open menu" class="cursor-pointer list-none rounded p-2 text-white focus:outline-2 focus:outline-gn-txt">☰</summary>
-        <ul class="absolute right-0 mt-2 w-48 rounded border border-gray-200 bg-white p-2 shadow">
-          <li><a href="dashboard.html" class="block rounded px-3 py-2 hover:bg-gray-100">Dashboard</a></li>
-          <li><a href="exercises.html" class="block rounded px-3 py-2 hover:bg-gray-100">Exercises</a></li>
-          <li><a href="routine-form.html" class="block rounded px-3 py-2 hover:bg-gray-100">Routines</a></li>
-          <li><a href="profile.html" class="block rounded px-3 py-2 hover:bg-gray-100">Profile</a></li>
+        <summary class="list-none [&::-webkit-details-marker]:hidden cursor-pointer p-1 text-white">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </summary>
+        <ul class="absolute left-0 z-20 mt-3 w-48 rounded-lg border border-neutral-200 bg-white p-2 font-semibold shadow-lg">
+          <li><a href="home.html" class="block px-3 py-2 rounded-md hover:bg-neutral-100">Home</a></li>
+          <li><a href="dashboard.html" class="block px-3 py-2 rounded-md hover:bg-neutral-100">Dashboard</a></li>
+          <li><a href="exercises.html" class="block px-3 py-2 rounded-md hover:bg-neutral-100">Exercises</a></li>
+          <li><a href="routine-form.html" class="block px-3 py-2 rounded-md hover:bg-neutral-100">Routines</a></li>
+          <li><a href="settings.html" class="block px-3 py-2 rounded-md bg-green-50 text-green-800">Settings</a></li>
         </ul>
       </details>
-    </nav>
-  </header>
 
-  <main class="mx-auto w-full max-w-6xl flex-1 px-4 py-8">
-    <h1 class="text-2xl font-bold">Page Name</h1>
-  </main>
-
-  <footer class="border-t border-gray-200 bg-gray-50">
-    <div class="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-6 text-sm text-gray-600 md:flex-row md:justify-between">
-      <p>© 2026 FitPlan. SW 302 course project.</p>
-      <p>Built by Ali, Kareem, Saif, and Khaled.</p>
+      <ul class="hidden md:flex items-center gap-2 text-white font-semibold">
+        <li><a href="home.html" class="block px-4 py-2 rounded-md hover:bg-white/15">Home</a></li>
+        <li><a href="dashboard.html" class="block px-4 py-2 rounded-md hover:bg-white/15">Dashboard</a></li>
+        <li><a href="exercises.html" class="block px-4 py-2 rounded-md hover:bg-white/15">Exercises</a></li>
+        <li><a href="routine-form.html" class="block px-4 py-2 rounded-md hover:bg-white/15">Routines</a></li>
+        <li><a href="settings.html" class="block px-4 py-2 rounded-md bg-white/20">Settings</a></li>
+      </ul>
+      <svg class="w-7 h-7 md:w-8 md:h-8 shrink-0 text-white" fill="currentColor" viewBox="0 0 24 24">
+        <circle cx="12" cy="7" r="4.5"/>
+        <path d="M3 22c0-5 4-8 9-8s9 3 9 8z"/>
+      </svg>
     </div>
-  </footer>
+  </nav>
 
+  <main class="max-w-6xl mx-auto px-4 md:px-6 py-8 md:py-12">
+
+    
+    <div class="mb-6">
+      <p class="text-xs font-bold tracking-widest text-green-800 uppercase">Preferences</p>
+      <h1 class="text-4xl md:text-5xl font-medium tracking-tight mt-2">Settings</h1>
+      <p class="text-neutral-600 mt-3">Manage your account and application preferences.</p>
+    </div>
+
+    <div class="flex flex-col md:flex-row md:items-start gap-4">
+
+      
+      <aside class="w-full md:w-44 shrink-0 bg-white border border-neutral-200 rounded-xl p-2">
+        <ul class="flex md:block overflow-x-auto whitespace-nowrap font-semibold text-neutral-600">
+          <li><a href="#profile" class="block px-3 py-3 rounded-md bg-green-50 text-green-800">Profile</a></li>
+          <li><a href="#account" class="block px-3 py-3 rounded-md hover:bg-neutral-100">Account</a></li>
+          <li><a href="#" class="block px-3 py-3 rounded-md hover:bg-neutral-100">Notifications</a></li>
+          <li><a href="#" class="block px-3 py-3 rounded-md hover:bg-neutral-100">Appearance</a></li>
+          <li><a href="#" class="block px-3 py-3 rounded-md hover:bg-neutral-100">Security</a></li>
+        </ul>
+      </aside>
+
+      <div class="flex-1 min-w-0 space-y-4">
+
+        
+        <section id="profile" class="bg-white border border-neutral-200 rounded-xl p-4 md:p-6">
+          <div class="flex items-start gap-3 mb-6">
+            <span class="w-7 h-7 rounded-full bg-green-50 text-green-800 text-xs font-bold flex items-center justify-center">01</span>
+            <div>
+              <h2 class="text-xl">Profile Settings</h2>
+              <p class="text-sm text-neutral-600 mt-1">Update your personal information.</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-14 h-14 rounded-full bg-green-800 text-white text-xl font-bold flex items-center justify-center">SA</div>
+            <div>
+              <p class="font-semibold">Profile Picture</p>
+              <p class="text-sm text-neutral-600">JPG or PNG, up to 2 MB</p>
+              <label class="text-sm font-semibold text-green-800 cursor-pointer">
+                Change photo
+                <input type="file" accept="image/png, image/jpeg" class="hidden">
+              </label>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-sm font-semibold mb-2">Full Name</label>
+              <input type="text" value="Sarah Ahmed" class="w-full border border-neutral-300 rounded-md px-3 py-2.5 text-sm font-semibold">
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-2">Email Address</label>
+              <input type="email" value="sarah@gymfit.com" class="w-full border border-neutral-300 rounded-md px-3 py-2.5 text-sm font-semibold">
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-2">Role / Job Title</label>
+              <input type="text" value="Personal Trainer" class="w-full border border-neutral-300 rounded-md px-3 py-2.5 text-sm font-semibold">
+            </div>
+          </div>
+
+          <div class="flex justify-end mt-6">
+            <button class="w-full sm:w-auto bg-green-800 text-white font-semibold px-6 py-3 rounded-md">Save Changes</button>
+          </div>
+        </section>
+
+        
+        <section id="account" class="bg-white border border-neutral-200 rounded-xl p-4 md:p-6">
+          <div class="flex items-start gap-3 mb-6">
+            <span class="w-7 h-7 rounded-full bg-green-50 text-green-800 text-xs font-bold flex items-center justify-center">02</span>
+            <div>
+              <h2 class="text-xl">Account Settings</h2>
+              <p class="text-sm text-neutral-600 mt-1">Keep your sign-in credentials secure.</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div>
+              <label class="block text-sm font-semibold mb-2">New Password</label>
+              <input type="password" placeholder="Enter new password" class="w-full border border-neutral-300 rounded-md px-3 py-2.5 text-sm font-semibold">
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-2">Confirm New Password</label>
+              <input type="password" placeholder="Confirm new password" class="w-full border border-neutral-300 rounded-md px-3 py-2.5 text-sm font-semibold">
+            </div>
+          </div>
+
+          <div class="flex justify-end mt-6">
+            <button class="w-full sm:w-auto border-2 border-green-800 text-green-800 font-semibold px-6 py-3 rounded-md">Update Password</button>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+  </main>
 </body>
 </html>

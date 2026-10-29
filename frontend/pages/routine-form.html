@@ -2,45 +2,211 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Page Name | FitPlan</title>
-  <link href="../dist/output.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Routine Builder</title>
+  <link rel="stylesheet" href="../dist/output.css">
 </head>
-<body class="flex min-h-screen flex-col bg-gray-50 text-gray-900">
-
-  <header class="bg-blk">
-    <nav aria-label="Main navigation" class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-      <a href="home.html" class="text-xl font-bold text-gn-txt">FitPlan</a>
-
-      <ul class="hidden items-center gap-6 md:flex">
-        <li><a href="dashboard.html" class="text-gray-200 hover:text-gn-txt focus:outline-2 focus:outline-gn-txt">Dashboard</a></li>
-        <li><a href="exercises.html" class="text-gray-200 hover:text-gn-txt focus:outline-2 focus:outline-gn-txt">Exercises</a></li>
-        <li><a href="routine-form.html" class="text-gray-200 hover:text-gn-txt focus:outline-2 focus:outline-gn-txt">Routines</a></li>
-        <li><a href="profile.html" class="text-gray-200 hover:text-gn-txt focus:outline-2 focus:outline-gn-txt">Profile</a></li>
-      </ul>
-
+<body class="bg-neutral-100 text-neutral-900 font-sans">
+  <nav class="bg-green-800">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between gap-4">
+      
       <details class="relative md:hidden">
-        <summary aria-label="Open menu" class="cursor-pointer list-none rounded p-2 text-white focus:outline-2 focus:outline-gn-txt">☰</summary>
-        <ul class="absolute right-0 mt-2 w-48 rounded border border-gray-200 bg-white p-2 shadow">
-          <li><a href="dashboard.html" class="block rounded px-3 py-2 hover:bg-gray-100">Dashboard</a></li>
-          <li><a href="exercises.html" class="block rounded px-3 py-2 hover:bg-gray-100">Exercises</a></li>
-          <li><a href="routine-form.html" class="block rounded px-3 py-2 hover:bg-gray-100">Routines</a></li>
-          <li><a href="profile.html" class="block rounded px-3 py-2 hover:bg-gray-100">Profile</a></li>
+        <summary class="list-none [&::-webkit-details-marker]:hidden cursor-pointer p-1 text-white">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </summary>
+        <ul class="absolute left-0 z-20 mt-3 w-48 rounded-lg border border-neutral-200 bg-white p-2 font-semibold shadow-lg">
+          <li><a href="home.html" class="block px-3 py-2 rounded-md hover:bg-neutral-100">Home</a></li>
+          <li><a href="dashboard.html" class="block px-3 py-2 rounded-md hover:bg-neutral-100">Dashboard</a></li>
+          <li><a href="exercises.html" class="block px-3 py-2 rounded-md hover:bg-neutral-100">Exercises</a></li>
+          <li><a href="routine-form.html" class="block px-3 py-2 rounded-md bg-green-50 text-green-800">Routines</a></li>
+          <li><a href="settings.html" class="block px-3 py-2 rounded-md hover:bg-neutral-100">Settings</a></li>
         </ul>
       </details>
-    </nav>
-  </header>
 
-  <main class="mx-auto w-full max-w-6xl flex-1 px-4 py-8">
-    <h1 class="text-2xl font-bold">Page Name</h1>
+      <ul class="hidden md:flex items-center gap-2 text-white font-semibold">
+        <li><a href="home.html" class="block px-4 py-2 rounded-md hover:bg-white/15">Home</a></li>
+        <li><a href="dashboard.html" class="block px-4 py-2 rounded-md hover:bg-white/15">Dashboard</a></li>
+        <li><a href="exercises.html" class="block px-4 py-2 rounded-md hover:bg-white/15">Exercises</a></li>
+        <li><a href="routine-form.html" class="block px-4 py-2 rounded-md bg-white/20">Routines</a></li>
+        <li><a href="settings.html" class="block px-4 py-2 rounded-md hover:bg-white/15">Settings</a></li>
+      </ul>
+      <svg class="w-7 h-7 md:w-8 md:h-8 shrink-0 text-white" fill="currentColor" viewBox="0 0 24 24">
+        <circle cx="12" cy="7" r="4.5"/>
+        <path d="M3 22c0-5 4-8 9-8s9 3 9 8z"/>
+      </svg>
+    </div>
+  </nav>
+
+  <main class="max-w-6xl mx-auto px-4 md:px-6 pt-8 pb-28 sm:pb-8 md:py-12">
+
+    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-6">
+      <div>
+        <p class="text-xs font-bold tracking-widest text-green-800 uppercase">Training</p>
+        <h1 class="text-4xl md:text-5xl font-medium tracking-tight mt-2">Routine Builder</h1>
+        <p class="text-neutral-600 mt-3">Create and customize workout plans for your members.</p>
+      </div>
+      <button class="hidden sm:block shrink-0 bg-green-800 text-white font-semibold px-6 py-3 rounded-md">Save Routine</button>
+    </div>
+
+    
+    <section class="bg-white border border-neutral-200 rounded-xl p-4 md:p-6 mb-4">
+      <div class="flex items-start gap-3 mb-6">
+        <span class="w-7 h-7 rounded-full bg-green-50 text-green-800 text-xs font-bold flex items-center justify-center">01</span>
+        <div>
+          <h2 class="text-xl">Routine Information</h2>
+          <p class="text-sm text-neutral-600 mt-1">Set up the plan details and training objective.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div>
+          <label class="block text-sm font-semibold mb-2">Routine Name</label>
+          <input type="text" value="Lower Body Strength" class="w-full border border-neutral-300 rounded-md px-3 py-2.5 text-sm font-semibold">
+        </div>
+        <div>
+          <label class="block text-sm font-semibold mb-2">Assigned Member</label>
+          <select class="w-full border border-neutral-300 rounded-md px-3 py-2.5 text-sm font-semibold bg-white">
+            <option>Sarah Ahmed</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-semibold mb-2">Fitness Goal</label>
+          <select class="w-full border border-neutral-300 rounded-md px-3 py-2.5 text-sm font-semibold bg-white">
+            <option>Strength</option>
+            <option>Hypertrophy</option>
+            <option>Endurance</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-semibold mb-2">Difficulty Level</label>
+          <select class="w-full border border-neutral-300 rounded-md px-3 py-2.5 text-sm font-semibold bg-white">
+            <option>Beginner</option>
+            <option selected>Intermediate</option>
+            <option>Advanced</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-semibold mb-2">Duration</label>
+          <div class="flex border border-neutral-300 rounded-md overflow-hidden">
+            <input type="number" value="8" class="w-full px-3 py-2.5 text-sm font-semibold">
+            <span class="px-4 flex items-center bg-neutral-100 border-l border-neutral-300 text-sm text-neutral-600">weeks</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="bg-white border border-neutral-200 rounded-xl p-4 md:p-6">
+      <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
+        <div class="flex items-start gap-3">
+          <span class="w-7 h-7 rounded-full bg-green-50 text-green-800 text-xs font-bold flex items-center justify-center">02</span>
+          <div>
+            <h2 class="text-xl">Workout Schedule</h2>
+            <p class="text-sm text-neutral-600 mt-1">Select a day and organize its exercises.</p>
+          </div>
+        </div>
+        <button class="w-full sm:w-auto shrink-0 bg-green-800 text-white font-semibold px-5 py-2.5 rounded-md flex items-center justify-center gap-2">
+          <span class="text-xl leading-none">+</span> Add Exercise
+        </button>
+      </div>
+      <div class="grid grid-cols-7 border border-neutral-200 rounded-lg overflow-hidden text-center text-sm md:text-base mb-6">
+        <div class="bg-green-800 text-white py-2 md:py-3">
+          <p class="font-semibold">Mon</p><p class="text-xs mt-1">3</p>
+        </div>
+        <div class="py-2 md:py-3 border-l border-neutral-200">
+          <p class="font-semibold">Tue</p><p class="text-xs mt-1 text-neutral-500">—</p>
+        </div>
+        <div class="py-2 md:py-3 border-l border-neutral-200">
+          <p class="font-semibold">Wed</p><p class="text-xs mt-1 text-neutral-500">4</p>
+        </div>
+        <div class="py-2 md:py-3 border-l border-neutral-200">
+          <p class="font-semibold">Thu</p><p class="text-xs mt-1 text-neutral-500">—</p>
+        </div>
+        <div class="py-2 md:py-3 border-l border-neutral-200">
+          <p class="font-semibold">Fri</p><p class="text-xs mt-1 text-neutral-500">3</p>
+        </div>
+        <div class="py-2 md:py-3 border-l border-neutral-200">
+          <p class="font-semibold">Sat</p><p class="text-xs mt-1 text-neutral-500">—</p>
+        </div>
+        <div class="py-2 md:py-3 border-l border-neutral-200">
+          <p class="font-semibold">Sun</p><p class="text-xs mt-1 text-neutral-500">—</p>
+        </div>
+      </div>
+
+      
+      <div class="overflow-x-auto">
+      <table class="w-full min-w-[640px] border-separate border-spacing-y-2">
+        <thead>
+          <tr class="text-xs font-semibold tracking-wider text-neutral-600 uppercase text-left">
+            <th class="px-3 py-2 lg:w-1/2">Exercise Name</th>
+            <th class="px-2 py-2">Sets</th>
+            <th class="px-2 py-2">Reps</th>
+            <th class="px-2 py-2">Rest Time</th>
+            <th class="px-2 py-2">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-neutral-100">
+            <td class="px-3 py-3 rounded-l-lg whitespace-nowrap"><span class="text-xs font-bold text-green-800 mr-3">01</span><span class="font-semibold">Barbell Squat</span></td>
+            <td class="px-2 py-3"><input type="text" value="4" class="w-full border border-neutral-300 rounded-md px-3 py-2 bg-white"></td>
+            <td class="px-2 py-3"><input type="text" value="8" class="w-full border border-neutral-300 rounded-md px-3 py-2 bg-white"></td>
+            <td class="px-2 py-3"><input type="text" value="90 sec" class="w-full border border-neutral-300 rounded-md px-3 py-2 bg-white"></td>
+            <td class="px-2 py-3 rounded-r-lg">
+              <div class="flex gap-4 px-2">
+                <button class="text-neutral-500">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 4l5 5L9 20H4v-5z"/></svg>
+                </button>
+                <button class="text-red-700">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M9 6V4h6v2M6 6l1 14h10l1-14M10 10v6M14 10v6"/></svg>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr class="bg-neutral-100">
+            <td class="px-3 py-3 rounded-l-lg whitespace-nowrap"><span class="text-xs font-bold text-green-800 mr-3">02</span><span class="font-semibold">Walking Lunges</span></td>
+            <td class="px-2 py-3"><input type="text" value="3" class="w-full border border-neutral-300 rounded-md px-3 py-2 bg-white"></td>
+            <td class="px-2 py-3"><input type="text" value="12" class="w-full border border-neutral-300 rounded-md px-3 py-2 bg-white"></td>
+            <td class="px-2 py-3"><input type="text" value="60 sec" class="w-full border border-neutral-300 rounded-md px-3 py-2 bg-white"></td>
+            <td class="px-2 py-3 rounded-r-lg">
+              <div class="flex gap-4 px-2">
+                <button class="text-neutral-500">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 4l5 5L9 20H4v-5z"/></svg>
+                </button>
+                <button class="text-red-700">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M9 6V4h6v2M6 6l1 14h10l1-14M10 10v6M14 10v6"/></svg>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr class="bg-neutral-100">
+            <td class="px-3 py-3 rounded-l-lg whitespace-nowrap"><span class="text-xs font-bold text-green-800 mr-3">03</span><span class="font-semibold">Leg Press</span></td>
+            <td class="px-2 py-3"><input type="text" value="3" class="w-full border border-neutral-300 rounded-md px-3 py-2 bg-white"></td>
+            <td class="px-2 py-3"><input type="text" value="10" class="w-full border border-neutral-300 rounded-md px-3 py-2 bg-white"></td>
+            <td class="px-2 py-3"><input type="text" value="60 sec" class="w-full border border-neutral-300 rounded-md px-3 py-2 bg-white"></td>
+            <td class="px-2 py-3 rounded-r-lg">
+              <div class="flex gap-4 px-2">
+                <button class="text-neutral-500">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 4l5 5L9 20H4v-5z"/></svg>
+                </button>
+                <button class="text-red-700">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M9 6V4h6v2M6 6l1 14h10l1-14M10 10v6M14 10v6"/></svg>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="border-t border-gray-200 bg-gray-50">
-    <div class="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-6 text-sm text-gray-600 md:flex-row md:justify-between">
-      <p>© 2026 FitPlan. SW 302 course project.</p>
-      <p>Built by Ali, Kareem, Saif, and Khaled.</p>
+  
+  <div class="sm:hidden fixed inset-x-0 bottom-0 z-10 px-4 pb-4">
+    <div class="flex gap-3 rounded-xl border border-neutral-200 bg-white p-2 shadow-lg">
+      <button class="flex-1 bg-neutral-200 text-neutral-900 font-semibold py-3 rounded-md">Cancel</button>
+      <button class="flex-1 bg-green-800 text-white font-semibold py-3 rounded-md">Save Routine</button>
     </div>
-  </footer>
-
+  </div>
 </body>
 </html>
