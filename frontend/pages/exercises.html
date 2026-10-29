@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exercises | FitPlan</title>
+  <link href="../dist/output.css" rel="stylesheet">
+</head>
+<body class="flex min-h-screen flex-col bg-white text-gray-900">
+
+  <header class="bg-acc-dark">
+    <nav aria-label="Main navigation" class="mx-auto flex max-w-6xl items-center justify-between px-4 py-6">
+
+      <ul class="hidden items-center gap-10 font-semibold text-white md:flex">
+        <li><a href="home.html" class="hover:underline focus:outline focus:outline-2 focus:outline-offset-4 focus:outline-white">Home</a></li>
+        <li><a href="dashboard.html" class="hover:underline focus:outline focus:outline-2 focus:outline-offset-4 focus:outline-white">Dashboard</a></li>
+        <li><a href="exercises.html" class="hover:underline focus:outline focus:outline-2 focus:outline-offset-4 focus:outline-white">Exercises</a></li>
+        <li><a href="routine-form.html" class="hover:underline focus:outline focus:outline-2 focus:outline-offset-4 focus:outline-white">Routines</a></li>
+        <li><a href="settings.html" class="hover:underline focus:outline focus:outline-2 focus:outline-offset-4 focus:outline-white">Settings</a></li>
+      </ul>
+
+      <details class="relative md:hidden">
+        <summary aria-label="Open menu" class="cursor-pointer list-none rounded p-2 text-2xl text-white focus:outline focus:outline-2 focus:outline-white [&::-webkit-details-marker]:hidden">☰</summary>
+        <ul class="absolute left-0 z-10 mt-2 w-48 rounded border border-gray-200 bg-white p-2 shadow">
+          <li><a href="home.html" class="block rounded px-3 py-2 text-blk hover:bg-gray-100 focus:outline focus:outline-2 focus:outline-acc">Home</a></li>
+          <li><a href="dashboard.html" class="block rounded px-3 py-2 text-blk hover:bg-gray-100 focus:outline focus:outline-2 focus:outline-acc">Dashboard</a></li>
+          <li><a href="exercises.html" class="block rounded px-3 py-2 text-blk hover:bg-gray-100 focus:outline focus:outline-2 focus:outline-acc">Exercises</a></li>
+          <li><a href="routine-form.html" class="block rounded px-3 py-2 text-blk hover:bg-gray-100 focus:outline focus:outline-2 focus:outline-acc">Routines</a></li>
+          <li><a href="settings.html" class="block rounded px-3 py-2 text-blk hover:bg-gray-100 focus:outline focus:outline-2 focus:outline-acc">Settings</a></li>
+        </ul>
+      </details>
+
+      <details class="relative">
+        <summary aria-label="Account menu" class="cursor-pointer list-none rounded p-1 text-gray-300 focus:outline focus:outline-2 focus:outline-white [&::-webkit-details-marker]:hidden">
+          <svg viewBox="0 0 40 64" class="h-10 w-7" fill="currentColor" aria-hidden="true">
+            <circle cx="20" cy="12" r="11"/>
+            <path d="M4 36h32L20 58z" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/>
+          </svg>
+        </summary>
+        <ul class="absolute right-0 z-10 mt-2 w-40 rounded border border-gray-200 bg-white p-2 shadow">
+          <li><a href="profile.html" class="block rounded px-3 py-2 text-blk hover:bg-gray-100 focus:outline focus:outline-2 focus:outline-acc">Profile</a></li>
+          <li><a href="login.html" class="block rounded px-3 py-2 text-blk hover:bg-gray-100 focus:outline focus:outline-2 focus:outline-acc">Log in</a></li>
+          <li><a href="register.html" class="block rounded px-3 py-2 text-blk hover:bg-gray-100 focus:outline focus:outline-2 focus:outline-acc">Register</a></li>
+        </ul>
+      </details>
+
+    </nav>
+  </header>
+
+  <main class="mx-auto w-full max-w-6xl flex-1 px-4 py-8">
+
+    <!-- Hero -->
+    <section class="flex items-center justify-between gap-4 rounded-2xl bg-acc-dark p-6 text-white">
+      <div>
+        <h1 class="text-2xl font-bold md:text-3xl">Your Fitness Journey<br>Starts Here</h1>
+        <p class="mt-3 max-w-xs text-sm md:max-w-sm md:text-base">Track your progress and reach your goals with the right workouts and routines.</p>
+        <a href="#featured" class="mt-5 inline-block rounded-lg bg-green-50 px-4 py-2 text-sm font-bold text-acc-dark hover:opacity-90 focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-white">Explore Workouts →</a>
+      </div>
+      <svg viewBox="0 0 64 64" class="size-20 shrink-0 fill-none stroke-white stroke-[3] md:size-28" stroke-linecap="round" aria-hidden="true">
+        <g transform="rotate(-45 32 32)">
+          <line x1="14" y1="32" x2="50" y2="32"/>
+          <rect x="16" y="20" width="7" height="24" rx="2"/>
+          <rect x="41" y="20" width="7" height="24" rx="2"/>
+          <rect x="9" y="25" width="7" height="14" rx="2"/>
+          <rect x="48" y="25" width="7" height="14" rx="2"/>
+        </g>
+      </svg>
+    </section>
+
+    <div class="mt-8 grid gap-8 md:grid-cols-2">
+
+      <!-- Featured workouts -->
+      <section id="featured" aria-labelledby="featured-title">
+        <div class="flex items-center justify-between">
+          <h2 id="featured-title" class="text-lg font-bold text-blk">Featured Workouts</h2>
+          <a href="exercises.html" class="text-sm font-semibold text-acc-dark underline focus:outline focus:outline-2 focus:outline-acc">See All →</a>
+        </div>
+
+        <ul class="mt-3 space-y-3">
+          <li>
+            <a href="exercise-detail.html" class="flex items-center gap-4 rounded-xl border border-gray-200 p-3 shadow-sm hover:bg-gray-50 focus:outline focus:outline-2 focus:outline-acc">
+              <img src="../images/pushup.png" alt="" class="size-20 rounded-lg bg-orange-50 object-contain">
+              <div class="flex-1">
+                <h3 class="font-bold text-blk">Push-up</h3>
+                <p class="text-sm text-gray-500">Chest • Shoulders • Triceps</p>
+                <span class="mt-1 inline-block rounded bg-green-300 px-2 py-0.5 text-xs font-semibold text-acc-dark">Beginner</span>
+              </div>
+              <svg viewBox="0 0 24 24" class="size-5 shrink-0 fill-none stroke-acc-dark stroke-2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+            </a>
+          </li>
+
+          <li>
+            <a href="exercise-detail.html" class="flex items-center gap-4 rounded-xl border border-gray-200 p-3 shadow-sm hover:bg-gray-50 focus:outline focus:outline-2 focus:outline-acc">
+              <img src="../images/squat.png" alt="" class="size-20 rounded-lg bg-orange-50 object-contain">
+              <div class="flex-1">
+                <h3 class="font-bold text-blk">Squat</h3>
+                <p class="text-sm text-gray-500">Legs • Glutes</p>
+                <span class="mt-1 inline-block rounded bg-green-300 px-2 py-0.5 text-xs font-semibold text-acc-dark">Intermediate</span>
+              </div>
+              <svg viewBox="0 0 24 24" class="size-5 shrink-0 fill-none stroke-acc-dark stroke-2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+            </a>
+          </li>
+
+          <li>
+            <a href="exercise-detail.html" class="flex items-center gap-4 rounded-xl border border-gray-200 p-3 shadow-sm hover:bg-gray-50 focus:outline focus:outline-2 focus:outline-acc">
+              <img src="../images/plank.png" alt="" class="size-20 rounded-lg bg-orange-50 object-contain">
+              <div class="flex-1">
+                <h3 class="font-bold text-blk">Plank</h3>
+                <p class="text-sm text-gray-500">Core • Shoulders</p>
+                <span class="mt-1 inline-block rounded bg-acc-dark px-2 py-0.5 text-xs font-semibold text-white">Advanced</span>
+              </div>
+              <svg viewBox="0 0 24 24" class="size-5 shrink-0 fill-none stroke-acc-dark stroke-2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Progress overview -->
+      <section aria-labelledby="progress-title">
+        <h2 id="progress-title" class="text-lg font-bold text-blk">Progress Overview</h2>
+
+        <ul class="mt-3 grid grid-cols-2 gap-3">
+          <li class="flex items-center gap-3 rounded-xl border border-gray-200 p-4 shadow-sm">
+            <svg viewBox="0 0 24 24" class="size-6 shrink-0 fill-none stroke-acc-dark stroke-2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></svg>
+            <div>
+              <p class="text-xs text-gray-500">Total Workouts</p>
+              <p class="font-bold text-acc-dark">24</p>
+            </div>
+          </li>
+          <li class="flex items-center gap-3 rounded-xl border border-gray-200 p-4 shadow-sm">
+            <svg viewBox="0 0 24 24" class="size-6 shrink-0 fill-none stroke-acc-dark stroke-2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+            <div>
+              <p class="text-xs text-gray-500">Active Streak</p>
+              <p class="font-bold text-acc-dark">6 days</p>
+            </div>
+          </li>
+          <li class="flex items-center gap-3 rounded-xl border border-gray-200 p-4 shadow-sm">
+            <svg viewBox="0 0 24 24" class="size-6 shrink-0 fill-acc-dark stroke-acc-dark stroke-2" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            <div>
+              <p class="text-xs text-gray-500">Calories Burned</p>
+              <p class="font-bold text-acc-dark">1,840 kcal</p>
+            </div>
+          </li>
+          <li class="flex items-center gap-3 rounded-xl border border-gray-200 p-4 shadow-sm">
+            <svg viewBox="0 0 24 24" class="size-6 shrink-0 fill-none stroke-acc-dark stroke-2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            <div>
+              <p class="text-xs text-gray-500">Recent Activity</p>
+              <p class="font-bold text-acc-dark">Last: Today</p>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Weekly activity chart -->
+        <div class="mt-3 rounded-xl border border-gray-200 p-4 shadow-sm">
+          <h3 class="font-bold text-blk">Weekly Activity</h3>
+          <div class="mt-4 flex gap-3">
+            <ul class="flex h-28 flex-col justify-between text-xs text-gray-600" aria-hidden="true">
+              <li>40</li><li>30</li><li>20</li><li>10</li><li>0</li>
+            </ul>
+            <div class="flex-1">
+              <ul class="grid h-28 grid-cols-7 grid-rows-1 items-end justify-items-center">
+                <li class="h-[43%] w-5 rounded-t bg-acc-dark" title="Mon: 17"></li>
+                <li class="h-[62%] w-5 rounded-t bg-acc-dark" title="Tue: 25"></li>
+                <li class="h-[53%] w-5 rounded-t bg-acc-dark" title="Wed: 21"></li>
+                <li class="h-[80%] w-5 rounded-t bg-acc-dark" title="Thu: 32"></li>
+                <li class="h-[65%] w-5 rounded-t bg-acc-dark" title="Fri: 26"></li>
+                <li class="h-[65%] w-5 rounded-t bg-acc-dark" title="Sat: 26"></li>
+                <li class="h-[80%] w-5 rounded-t bg-acc-dark" title="Sun: 32"></li>
+              </ul>
+              <ul class="mt-2 grid grid-cols-7 text-center text-xs text-gray-600">
+                <li>Mon</li><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li><li>Sun</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="relative bg-gray-300 px-16 py-6 text-center font-semibold">
+    <p class="text-acc-dark">Fitness Workout - by ali, kareem, saif, and khaled</p>
+    <a href="https://github.com/Kh4led-05/SW302.git" class="mt-1 inline-block text-blk underline hover:text-acc-dark focus:outline focus:outline-2 focus:outline-blk">https://github.com/Kh4led-05/SW302.git</a>
+
+    <button type="button" aria-label="Toggle dark mode" class="absolute bottom-4 right-4 rounded-full p-1 text-blk focus:outline focus:outline-2 focus:outline-blk">
+      <svg viewBox="0 0 24 24" class="size-8" fill="currentColor" aria-hidden="true">
+        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+      </svg>
+    </button>
+  </footer>
+
+</body>
+</html>
