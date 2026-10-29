@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard | FitPlan</title>
+  <link href="../dist/output.css" rel="stylesheet">
+</head>
+<body class="flex min-h-screen flex-col bg-white text-gray-900">
+
+  <header class="bg-acc-dark">
+    <nav aria-label="Main navigation" class="mx-auto flex max-w-6xl items-center justify-between px-4 py-6">
+
+      <ul class="hidden items-center gap-10 font-semibold text-white md:flex">
+        <li><a href="home.html" class="hover:underline focus:outline focus:outline-2 focus:outline-offset-4 focus:outline-white">Home</a></li>
+        <li><a href="dashboard.html" aria-current="page" class="underline focus:outline focus:outline-2 focus:outline-offset-4 focus:outline-white">Dashboard</a></li>
+        <li><a href="exercises.html" class="hover:underline focus:outline focus:outline-2 focus:outline-offset-4 focus:outline-white">Exercises</a></li>
+        <li><a href="routine-form.html" class="hover:underline focus:outline focus:outline-2 focus:outline-offset-4 focus:outline-white">Routines</a></li>
+        <li><a href="settings.html" class="hover:underline focus:outline focus:outline-2 focus:outline-offset-4 focus:outline-white">Settings</a></li>
+      </ul>
+
+      <details class="relative md:hidden">
+        <summary aria-label="Open menu" class="cursor-pointer list-none rounded p-2 text-2xl text-white focus:outline focus:outline-2 focus:outline-white [&::-webkit-details-marker]:hidden">☰</summary>
+        <ul class="absolute left-0 z-10 mt-2 w-48 rounded border border-gray-200 bg-white p-2 shadow">
+          <li><a href="home.html" class="block rounded px-3 py-2 text-blk hover:bg-gray-100 focus:outline focus:outline-2 focus:outline-acc">Home</a></li>
+          <li><a href="dashboard.html" class="block rounded px-3 py-2 text-blk hover:bg-gray-100 focus:outline focus:outline-2 focus:outline-acc">Dashboard</a></li>
+          <li><a href="exercises.html" class="block rounded px-3 py-2 text-blk hover:bg-gray-100 focus:outline focus:outline-2 focus:outline-acc">Exercises</a></li>
+          <li><a href="routine-form.html" class="block rounded px-3 py-2 text-blk hover:bg-gray-100 focus:outline focus:outline-2 focus:outline-acc">Routines</a></li>
+          <li><a href="settings.html" class="block rounded px-3 py-2 text-blk hover:bg-gray-100 focus:outline focus:outline-2 focus:outline-acc">Settings</a></li>
+        </ul>
+      </details>
+
+      <details class="relative">
+        <summary aria-label="Account menu" class="cursor-pointer list-none rounded p-1 text-gray-300 focus:outline focus:outline-2 focus:outline-white [&::-webkit-details-marker]:hidden">
+          <svg viewBox="0 0 40 64" class="h-10 w-7" fill="currentColor" aria-hidden="true">
+            <circle cx="20" cy="12" r="11"/>
+            <path d="M4 36h32L20 58z" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/>
+          </svg>
+        </summary>
+        <ul class="absolute right-0 z-10 mt-2 w-40 rounded border border-gray-200 bg-white p-2 shadow">
+          <li><a href="profile.html" class="block rounded px-3 py-2 text-blk hover:bg-gray-100 focus:outline focus:outline-2 focus:outline-acc">Profile</a></li>
+          <li><a href="login.html" class="block rounded px-3 py-2 text-blk hover:bg-gray-100 focus:outline focus:outline-2 focus:outline-acc">Log in</a></li>
+          <li><a href="register.html" class="block rounded px-3 py-2 text-blk hover:bg-gray-100 focus:outline focus:outline-2 focus:outline-acc">Register</a></li>
+        </ul>
+      </details>
+
+    </nav>
+  </header>
+
+  <main class="mx-auto w-full max-w-6xl flex-1 px-4 py-8">
+
+    <h1 class="text-3xl font-extrabold text-acc-dark">Dashboard</h1>
+    <p class="mt-2 text-gray-600">Welcome back — here's a quick look at your recent progress.</p>
+
+    <section aria-label="Summary stats" class="mt-6 grid gap-3 md:grid-cols-3 md:gap-4">
+      <div class="rounded-xl border border-gray-200 bg-white p-4">
+        <p class="text-sm text-gray-500">Total Workouts</p>
+        <p class="mt-1 text-3xl font-extrabold text-acc-dark">24</p>
+      </div>
+      <div class="rounded-xl border border-gray-200 bg-white p-4">
+        <p class="text-sm text-gray-500">Active Minutes</p>
+        <p class="mt-1 text-3xl font-extrabold text-acc-dark">640</p>
+      </div>
+      <div class="rounded-xl border border-gray-200 bg-white p-4">
+        <p class="text-sm text-gray-500">Current Workout Streak</p>
+        <p class="mt-1 text-3xl font-extrabold text-acc-dark">4 days</p>
+      </div>
+    </section>
+
+    <div class="mt-6 grid gap-6 md:grid-cols-5">
+
+      <section aria-labelledby="chart-title" class="rounded-xl border border-gray-200 bg-white p-4 md:col-span-3">
+        <div class="flex items-start justify-between">
+          <div>
+            <h2 id="chart-title" class="text-lg font-bold text-acc-dark">Weekly Workout Activity</h2>
+            <p class="mt-1 text-sm text-gray-500 md:hidden">4 workout days · minutes</p>
+          </div>
+          <span class="hidden rounded-full bg-gray-100 px-2 py-0.5 text-xs font-bold text-acc-dark md:inline">4 workout days</span>
+        </div>
+
+        <div class="mt-4 flex gap-2">
+          <div class="flex h-44 flex-col justify-between pr-1 text-right text-xs text-gray-500 md:h-52" aria-hidden="true">
+            <span>40</span><span>30</span><span>20</span><span>10</span><span>0</span>
+          </div>
+
+          <div class="flex-1">
+            <div class="relative h-44 border-b border-gray-200 md:h-52">
+              <div class="pointer-events-none absolute inset-0 flex flex-col justify-between" aria-hidden="true">
+                <span class="border-t border-gray-100"></span>
+                <span class="border-t border-gray-100"></span>
+                <span class="border-t border-gray-100"></span>
+                <span class="border-t border-gray-100"></span>
+                <span></span>
+              </div>
+            
+              <div class="relative grid h-full grid-cols-7 items-end gap-2 px-1 md:gap-4">
+                <div></div><div></div>
+                <div class="rounded-t-md bg-acc-dark" style="height:75%" title="Wed - 30 min"></div>
+                <div class="rounded-t-md bg-acc-dark" style="height:50%" title="Thu - 20 min"></div>
+                <div class="rounded-t-md bg-acc-dark" style="height:62.5%" title="Fri - 25 min"></div>
+                <div class="rounded-t-md bg-acc-dark" style="height:87.5%" title="Sat - 35 min"></div>
+                <div></div>
+              </div>
+            </div>
+            <div class="mt-2 grid grid-cols-7 gap-2 px-1 text-center text-xs text-gray-500 md:gap-4">
+              <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="recent-title" class="rounded-xl border border-gray-200 bg-white p-4 md:col-span-2">
+        <h2 id="recent-title" class="text-lg font-bold text-acc-dark">Recent Activity</h2>
+        <ul class="mt-3 divide-y divide-gray-200">
+          <li class="flex items-center justify-between py-3">
+            <div>
+              <p class="font-bold text-blk">Full Body Strength</p>
+              <p class="text-sm text-gray-500">Oct 24, 2026</p>
+            </div>
+            <span class="font-bold text-acc-dark">35 min</span>
+          </li>
+          <li class="flex items-center justify-between py-3">
+            <div>
+              <p class="font-bold text-blk">Low-Impact Cardio</p>
+              <p class="text-sm text-gray-500">Oct 23, 2026</p>
+            </div>
+            <span class="font-bold text-acc-dark">25 min</span>
+          </li>
+          <li class="flex items-center justify-between py-3">
+            <div>
+              <p class="font-bold text-blk">Core Essentials</p>
+              <p class="text-sm text-gray-500">Oct 22, 2026</p>
+            </div>
+            <span class="font-bold text-acc-dark">20 min</span>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="relative bg-gray-300 px-16 py-6 text-center font-semibold">
+    <p class="text-acc-dark">Fitness Workout - by ali, kareem, saif, and khaled</p>
+    <a href="https://github.com/Kh4led-05/SW302.git" class="mt-1 inline-block text-blk underline hover:text-acc-dark focus:outline focus:outline-2 focus:outline-blk">https://github.com/Kh4led-05/SW302.git</a>
+
+    <button type="button" aria-label="Toggle dark mode" class="absolute bottom-4 right-4 rounded-full p-1 text-blk focus:outline focus:outline-2 focus:outline-blk">
+      <svg viewBox="0 0 24 24" class="size-8" fill="currentColor" aria-hidden="true">
+        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+      </svg>
+    </button>
+  </footer>
+
+</body>
+</html>
