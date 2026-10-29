@@ -2,6 +2,8 @@ SW302
 
 SW302-Project Repo: https://github.com/Kh4led-05/SW302.git
 
+https://www.figma.com/design/hJlWjAXxfLAffLfpw9H7e6/Navbar-Footer?node-id=11-39&t=RufqtW1vG0NJqRBV-1
+
 SETUP (once)
 
 git clone https://github.com/Kh4led-05/SW302.git
